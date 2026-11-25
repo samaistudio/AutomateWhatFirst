@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AutomateWhatFirst: automation survey for small businesses</title>
+    <meta name="description" content="A 15-minute survey for small businesses. It creates one file for your own AI, which then writes your automation plan." />
+    <meta name="theme-color" content="#f7f7f6" />
+    <script>
+      // Dark theme with ?theme=dark or #dark (used for the portfolio embed). Light is the default.
+      (function () {
+        function apply() {
+          var dark = new URLSearchParams(location.search).get("theme") === "dark" || location.hash === "#dark";
+          var r = document.documentElement;
+          if (dark) r.setAttribute("data-theme", "dark"); else r.removeAttribute("data-theme");
+          var m = document.querySelector('meta[name="theme-color"]');
+          if (m) m.setAttribute("content", dark ? "#141414" : "#f7f7f6");
+        }
+        apply();
+        addEventListener("hashchange", apply);
+      })();
+    </script>
+    <!-- Fonts are bundled into this file (src/assets/fonts). The page makes no network requests. -->
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
